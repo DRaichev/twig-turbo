@@ -2,6 +2,7 @@
     "name": "raichev/twig-turbo-bundle",
     "description": "Opinionated extension for Symfony UX Turbo",
     "type": "symfony-bundle",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Raichev\\TwigTurboBundle\\": "src/"
