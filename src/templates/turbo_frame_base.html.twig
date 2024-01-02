@@ -1,0 +1,12 @@
+{% if twig_turbo_placeholder is defined and twig_turbo_placeholder == true %}
+    <turbo-frame id="{{ frameId }}" src="{{ frameSrc }}" loading="{{ loading }}"  {{ autoscroll ? 'autoscroll' : '' }} {{ disabled ? 'disabled' : ''}}>
+        {% block placeholder %}
+            {% include "@RaichevTwigTurbo/_loading_please_wait.html.twig" %}
+        {% endblock %}
+    </turbo-frame>
+{% else %}
+    <turbo-frame id="{{ frameId }}">
+        {% block content %}
+        {% endblock %}
+    </turbo-frame>
+{% endif %}
